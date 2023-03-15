@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>팀 프로젝트</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+        /*모든 텍스트 폰트 변경*/
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        /*최상단 메뉴 타이틀*/
+        .title {
+            background-color: black;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /*타이틀의 버튼*/
+        .main_btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* 버튼 호버시 이펙트 발생 */
+        .main_btn:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* 버튼 정렬 */
+        .main_btn-container {
+            display: flex;
+            justify-content: center;
+            /* 수평 중앙정렬 */
+            align-items: center;
+            margin-top: 1px;
+            /* 여백 추가 */
+        }
+        .main_box {
+            margin-top: 70px;
+            opacity: 0;
+            /* 요소들이 초기에 투명하게 설정 */
+            animation: fade-in 7s ease-in-out forwards;
+            /*에니메이션 설정은 fade -in , 결과값까지의 실행 시간은 7s가 걸린다.*/
+            /*ease-in-out은,  첫 프레임과 끝 프레임은 느리게 진행되지만, 중간 프레임은 빠르게 진행된다.*/
+            /*forwards는 애니메이션이 종료된 이후에도 마지막 프레임의 스타일을 유지하게한다.*/
+        }
+
+        /*
+        class_name:nth-child(n)
+        해당하는 class를 가진 가장 상단의 객채부터 선택한다.
+        */
+        .main_box:nth-child(1) {
+            animation-delay: 0s;
+            /*애니메이션이 실행되기전, 대기시간 설정*/
+        }
+
+        .main_box:nth-child(2) {
+            animation-delay: 0.5s;
+            /* 지연 시간 추가 */
+        }
+
+        .main_box:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .main_box:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fade-in {
+            0% {
+                /* 애니메이션 시작 시점에 투명도 0으로 설정 */
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+                /* 애니메이션 끝나는 시점에 투명도 1로 설정 */
+            }
+        }
+
+
+        /*팀원들의 미니 페이지*/
+        #team_location {
+            height: 500px;
+            background-color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        /*팀원들의 정보가 들어갈 div*/
+        .student_div {
+
+            margin-top: 13%;
+            margin-inline: 1% 1%;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+        }
+
+        /*팀원들의 이름*/
+        .student_name {
+            background-color: yellow;
+            height: 25px;
+            border-radius: 15%;
+        }
+
+        /*팀원들의 이미지 삽입 영역*/
+        .student_image {
+            background-color: aqua;
+            height: 175px;
+            border-radius: 50%;
+        }
+
+        /*손성수의 소개 페이지*/
+        .son_location {
+            height: 1050px;
+            text-align: center;
+            position: relative;
+            background-image: linear-gradient(0deg, rgba(226, 80, 61, 0.774), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2022/02/24/08/35/background-7031999__340.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*손성수 페이지의 사진*/
+        .son_image {
+            display: inline-block;
+            /*수평 정렬 하기 위한 인라인 설정*/
+            margin-top: 300px;
+            padding: 200px 100px;
+            background-image: url('https://www.korea.kr/goNewsRes/attaches/innods/images/000088/32_640.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            border-radius: 45%;
+            animation-name: move;
+            /*이동 애니메이션*/
+            animation-duration: 2s;
+            /*왕복 시간*/
+            animation-iteration-count: infinite
+                /*무한히 반복*/
+        }
+
+        /*이미지 호버*/
+        /*호버란? 마우스를 특정 위치에 가져다 대면 인식하는 내장 함수*/
+        .son_image:hover {
+            animation-name: rotate;
+            /* 빙글 도는 에니메이션*/
+            animation-duration: 1s;
+            /*한바퀴 도는 시간*/
+            animation-iteration-count: 1;
+            /*반복 횟수 1*/
+            /* 1회성 함수가 아니기에, 호버를 할 때마다 1회 반복한다.*/
+        }
+
+        /*평소 상태*/
+        @keyframes move {
+
+            /* move 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
+            0% {
+                transform: translateX(0);
+                /*처음 시작할 때에 수평으로 이동*/
+            }
+
+            50% {
+                transform: translateX(50px);
+                /* '프레임' 중간지점에서  오른쪽으로 이동
+                    현재값에 따라 x,y 좌표 부호값을 토대로 왼쪽으로 이동 가능*/
+            }
+
+            100% {
+                transform: translateX(0);
+                /* 애니메이션이 끝날 때 초기값으로 이동*/
+            }
+        }
+
+        /*호버상태*/
+        @keyframes rotate {
+
+            /* rotate 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
+            0% {
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*손성수의 테이블*/
+        .son_table {
+            display: inline-block;
+            margin-left: 100px;
+            background-color: transparent;
+            vertical-align: middle;
+        }
+
+        /*손성수의 stringText*/
+        .son_st {
+            padding: 15px;
+            font-size: 25px;
+            color: bisque
+        }
+
+        /*쏜의 st 호버시*/
+        .son_st:hover {
+            animation: blink 0.5s infinite;
+        }
+
+        /*이펙트 발생*/
+        @keyframes blink {
+            50% {
+                color: yellow;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
+            }
+        }
+
+        /*쏜의 이미지 호버 효과들*/
+        .son_img1:hover {
+            transform: scale(2.2);
+            transition: transform 0.9s ease;
+        }
+
+        .son_img2:hover {
+            transform: scale(2.2);
+            transition: transform 0.5s ease;
+        }
+
+        .son_img3:hover {
+            transform: scale(2.2);
+            transition: transform 0.5s ease;
+        }
+    </style>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <div
+        style="height: 1050px; background-image: url(https://mblogthumb-phinf.pstatic.net/MjAxNzA1MDJfMTIy/MDAxNDkzNzE1MTY5OTUz.ontrojYw9EVSwPc94chazIPBL-LXOcK1Zzy03ghTofMg.tFx17YWNNrnIy5Dad-mvlLS1DGCMd1HZir9F7tr9uVIg.PNG.jinmichu/02.png?type=w800); background-position: center; background-size: cover;">
+        <div class="title">
+            <h2>팀 프로젝트</h2>
+            <div class="button-container">
+                <button class="main_btn" type="button">손성수</button>
+                <button class="main_btn" type="button">이도윤</button>
+                <button class="main_btn" type="button">박재원</button>
+                <button class="main_btn" type="button">임상빈</button>
+                <button class="main_btn" type="button">윤성훈</button>
+            </div>
+        </div>
+        <div style="height: 150px;"></div>
+        <div class="main_box" style="margin-left: 100px;">
+            <h1>우리는 주니어 코린이에요!😎</h1>
+        </div>
+        <div class="main_box" style="margin-left: 150px;">
+            <h1>우리들은 게임을 좋아해서 모였어요👀</h1>
+        </div>
+        <div class="main_box" style="margin-left: 200px;">
+            <h1>우리들의 MBTI는 모두 IN**으로 시작해요!🤷‍♂️</h1>
+        </div>
+        <div class="main_box" style="margin-left: 250px;">
+            <h1>우리는 더 발전할 수 있는 주니어들입니다!🎉🎉🎉</h1>
+        </div>
+
+
+    </div>
+
+    <div id="team_location">
+        <div class="student_div">
+            <div class="student_name">a</div>
+            <div class="student_image"></div>
+        </div>
+        <div class="student_div">
+            <div class="student_name">b</div>
+            <div class="student_image"></div>
+        </div>
+        <div class="student_div">
+            <div class="student_name">c</div>
+            <div class="student_image"></div>
+        </div>
+        <div class="student_div">
+            <div class="student_name">d</div>
+            <div class="student_image"></div>
+        </div>
+        <div class="student_div">
+            <div class="student_name">e</div>
+            <div class="student_image"></div>
+        </div>
+    </div>
+
+
+
+    <div class="son_location">
+        <div class="son_table">
+            <table style="margin:200px; width:500px;">
+
+                <thead>
+                    <th colspan="2" class="son_st">
+                        <h2>못생겨서 얼굴사진 안올림ㅋㅋ</h2>
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="son_st">이름</td>
+                        <td class="son_st">손성수</td>
+                    </tr>
+                    <tr>
+                        <td class="son_st">email</td>
+                        <td class="son_st">thstjdtn05@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="son_st">MBTI</td>
+                        <td class="son_st">INFJ</td>
+                    </tr>
+                    <tr>
+                        <td class="son_st">code</td>
+                        <td class="son_st">c++,c#,python</td>
+                    </tr>
+                    <tr>
+                        <td class="son_st">취미</td>
+                        <td class="son_st">게임,요리,드라마·영화 시청</td>
+                    </tr>
+                    <tr>
+                        <td class="son_st" colspan="2">
+                            <a href="https://www.acmicpc.net/user/thstjdtn214"><img class="son_img1"
+                                    src="https://images.velog.io/images/flaxinger/post/608069bd-ced4-4de1-b59c-0abb36fa39ee/thumbnail.png"
+                                    width="50px" height="50px" /></a>
+                            &nbsp;&nbsp;
+                            <a href="https://velog.io/@rumor"><img class="son_img2"
+                                    src="https://velog.velcdn.com/images/soojung318/post/7a7926b3-649b-4e92-b4c5-0a91a3467bf9/image.jpg"
+                                    width="50px" height="50px" /></a>
+                            &nbsp;&nbsp;
+                            <a href="https://github.com/sungsu05"><img class="son_img3"
+                                    src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
+                                    width="50px" height="50px" /></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="son_image">&nbsp;</div>
+    </div>
+
+
+</body>
+
+</html>

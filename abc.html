@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box Animation Example</title>
+    <style>
+        .main_box {
+            position: absolute;
+            left: 0;
+            margin-left: 100px;
+            transition: all 2s ease-in-out;
+        }
+
+        .main_box h1 {
+            color: #333;
+        }
+
+        .center {
+            left: 50%;
+            margin-left: -150px;
+            color: red;
+        }
+
+        .main_box {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            animation: moveBox 1s ease-in-out forwards;
+        }
+
+        @keyframes moveBox {
+            0% {
+                top: 0;
+                color: black;
+            }
+
+            25% {
+                top: 25%;
+                color: red;
+            }
+
+            50% {
+                top: 50%;
+                color: green;
+            }
+
+            75% {
+                top: 75%;
+                color: blue;
+            }
+
+            100% {
+                top: 100%;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_box">
+        <h1>우리는 주니어 코린이에요!</h1>
+    </div>
+    <div class="main_box">
+        <h1>우리들은 게임을 좋아해서 모였어요!</h1>
+    </div>
+    <div class="main_box">
+        <h1>우리들의 MBTI는 모두 I로 시작해요!</h1>
+    </div>
+    <div class="main_box">
+        <h1>더 발전할 수 있는 주니어들입니다!</h1>
+    </div>
+    <script>
+        window.onload = function () {
+            var boxes = document.querySelectorAll('.main_box');
+            var interval = 200;
+            for (var i = 0; i < boxes.length; i++) {
+                (function (box, index) {
+                    setTimeout(function () {
+                        box.classList.add('center');
+                        if (index === boxes.length - 1) {
+                            box.addEventListener('transitionend', function () {
+                                box.style.color = 'blue';
+                            });
+                        }
+                    }, index * interval);
+                })(boxes[i], i);
+            }
+        };
+    </script>
+</body>
+
+</html>
