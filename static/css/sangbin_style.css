@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "NeoDunggeunmoPro-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TAEBAEKmilkyway";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#sangbin {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url("https://i.ibb.co/gjZKj89/wallpapersden-com-new-elden-ring-gaming-3840x2160.jpg")
+      fixed;
+  background-size: cover;
+
+  height: 90%;
+  padding: 10% 0% 10% 0%;
+  font-size: 1.5em;
+}
+
+.maintext {
+  animation: vin_appear 1.3s ease-out;
+}
+
+@keyframes vin_appear {
+  from {
+    opacity: 0;
+    margin-left: 1600px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 100px;
+  }
+}
+
+@keyframes vin_disappear {
+  from {
+    opacity: 1;
+    margin-left: 100px;
+  }
+  to {
+    opacity: 0;
+    margin-left: 1600px;
+  }
+}
+
+.box {
+  animation: img_appear 1.3s ease-out;
+}
+
+@keyframes img_appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes img_disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#vinyl_profile {
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+}
+
+.box.vibration {
+  animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
+}
+
+#sangbin > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#sangbin > div > pre {
+  font-family: "NeoDunggeunmoPro-Regular";
+  color: white;
+
+  margin-left: 100px;
+  position: relative;
+}
+
+#sangbin > div > pre > a {
+  text-decoration: none;
+}
+
+.vin_hover:hover {
+  color: #fff;
+  text-shadow: /* White glow */ 0 0 20px #b5ff53, 0 0 10px #fff, 0 0 20px #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+footer > p {
+  font-family: "TAEBAEKmilkyway";
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sang_vinyl {
+  text-shadow: 0 0 3vw #00e1ff;
+
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    color: #fed128;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #005c0c, 0 0 1.5vw #005c0c, 0 0 5vw #005c0c,
+      0 0 5vw #005c0c, 0 0 0.2vw #005c0c, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #806914;
+  }
+}
