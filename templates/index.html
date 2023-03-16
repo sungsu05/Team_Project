@@ -1,71 +1,63 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/static/css/css.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/css.css" />
 
 
-    <title>팀 프로젝트</title>
+  <title>팀 프로젝트</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
 
-    <!-- 임상빈JS -->
-    <script src="/static/sangbin.js"></script>
+  <!-- 임상빈JS -->
+  <script src="/static/sangbin.js"></script>
 
-    <!-- 이도윤 JS -->
-    <script src="/static/doyoon.js"></script>
+  <!-- 이도윤 JS -->
+  <script src="/static/doyoon.js"></script>
 
-    <!-- 이도윤 css -->
-    <link rel="stylesheet" href="/static/css/doyoon_style.css" />
-  </head>
+  <!-- 이도윤 css -->
+  <link rel="stylesheet" href="/static/css/doyoon_style.css" />
+  
+  <!-- 윤성훈 css -->
+  <link rel="stylesheet" href="/static/css/sh_style.css" />
+</head>
 
-  <body>
-    <!-- 메인 페이지 -->
-    <div
-      style="
+<body>
+  <!-- 메인 페이지 -->
+  <div style="
         height: 1050px;
         background-image: url(https://mblogthumb-phinf.pstatic.net/MjAxNzA1MDJfMTIy/MDAxNDkzNzE1MTY5OTUz.ontrojYw9EVSwPc94chazIPBL-LXOcK1Zzy03ghTofMg.tFx17YWNNrnIy5Dad-mvlLS1DGCMd1HZir9F7tr9uVIg.PNG.jinmichu/02.png?type=w800);
         background-position: center;
         background-size: cover;
-      "
-    >
-      <!-- 메인 타이틀 -->
-      <div class="title">
-        <h2>팀 프로젝트</h2>
-        <!-- 버튼 정렬을 위한 div -->
-        <div class="button-container">
-          <!-- 각각의 팀원 페이지로 이동할 버튼 구현  -->
-          <button class="main_btn" type="button">손성수</button>
-          <button class="main_btn" type="button">이도윤</button>
-          <button class="main_btn" type="button">박재원</button>
-          <button class="main_btn" type="button">임상빈</button>
-          <button class="main_btn" type="button">윤성훈</button>
-        </div>
+      ">
+    <!-- 메인 타이틀 -->
+    <div class="title" id="navbar">
+      <a href="#teamIntro"><button class="main_btn1" type="button">팀 프로젝트</button></a>
+      <!-- 버튼 정렬을 위한 div -->
+      <div class="button-container">
+        <!-- 각각의 팀원 페이지로 이동할 버튼 구현  -->   
+
+        <a href="#son_location"><button class="main_btn" type="button">손성수</button></a>
+        <a href="#sangbin"><button class="main_btn" type="button">임상빈</button></a>
+        <a href="#lee_location"><button class="main_btn" type="button">이도윤</button></a>
+        <a href="#sh_location"><button class="main_btn" type="button">윤성훈</button></a>
+        <a href="#"><button class="main_btn" type="button">박재원</button></a>      
+        
       </div>
-      <!-- 빈 박스 생성 (main_box를 내리기 위함) -->
-      <div style="height: 150px"></div>
-      <!-- 팀 소개를 담은 div -->
-      <div class="teamIntro">
+    </div>
+    <!-- 빈 박스 생성 (main_box를 내리기 위함) -->
+    <div style="height: 150px"></div>
+    <!-- 팀 소개를 담은 div -->
+    <div class="teamIntro" id="teamIntro">
       <div class="main_box" style="margin-left: 100px">
         <h1>우리는 주니어 코린이에요!😎</h1>
       </div>
@@ -80,7 +72,7 @@
       </div>
     </div>
     <!-- 손성수 소개 페이지 -->
-    <div class="son_location">
+    <div class="son_location" id="son_location">
       <!-- 손성수를 소개할 테이블을 담을 div 선언, 인라인 요소를 담기 위함-->
       <div class="son_table">
         <!-- 손성수를 소개할 테이블 선언 -->
@@ -117,29 +109,17 @@
             <tr>
               <!-- 손성수의 백준,벨로그,깃허브 프로필 링크를 연결한 이미지 선언 -->
               <td class="son_st" colspan="2">
-                <a href="https://www.acmicpc.net/user/thstjdtn214" target="_blank"
-                  ><img
-                    class="son_img1"
+                <a href="https://www.acmicpc.net/user/thstjdtn214" target="_blank"><img class="son_img1"
                     src="https://images.velog.io/images/flaxinger/post/608069bd-ced4-4de1-b59c-0abb36fa39ee/thumbnail.png"
-                    width="50px"
-                    height="50px"
-                /></a>
+                    width="50px" height="50px" /></a>
                 &nbsp;&nbsp;
-                <a href="https://velog.io/@rumor" target="_blank"
-                  ><img
-                    class="son_img2"
+                <a href="https://velog.io/@rumor" target="_blank"><img class="son_img2"
                     src="https://velog.velcdn.com/images/soojung318/post/7a7926b3-649b-4e92-b4c5-0a91a3467bf9/image.jpg"
-                    width="50px"
-                    height="50px"
-                /></a>
+                    width="50px" height="50px" /></a>
                 &nbsp;&nbsp;
-                <a href="https://github.com/sungsu05" target="_blank"
-                  ><img
-                    class="son_img3"
+                <a href="https://github.com/sungsu05" target="_blank"><img class="son_img3"
                     src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
-                    width="50px"
-                    height="50px"
-                /></a>
+                    width="50px" height="50px" /></a>
               </td>
             </tr>
           </tbody>
@@ -152,13 +132,8 @@
     <div id="sangbin">
       <div>
         <div class="box" onclick="vibration(this)">
-          <img
-            src="https://i.ibb.co/pRGMQPW/image.png"
-            alt="profile"
-            id="vinyl_profile"
-            class="vinyl_profile"
-            style="animation: img 1s ease-out"
-          />
+          <img src="https://i.ibb.co/pRGMQPW/image.png" alt="profile" id="vinyl_profile" class="vinyl_profile"
+            style="animation: img 1s ease-out" />
         </div>
         <pre class="maintext">
        <span class="vin_hover">Name : <span id="sang_vinyl" class="sang_vinyl" style="font-size: 1.5em;">임상빈</span></span>
@@ -176,105 +151,144 @@
       </div>
     </div>
 
-     <!-- 이도윤 페이지 -->
-    <section class="lee_location">
+    <!-- 이도윤 페이지 -->
+    <section class="lee_location" id="lee_location">
 
       <!-- 이도윤 소개 사진 -->
       <div class="lee_profile_left">
-          <div>
-              <img id="lee_change_img" src="https://live.staticflickr.com/65535/52748617428_fac52241f2_c.jpg"
-                  width="500" border="1">
-          </div>
-          <table>
-              <tr>
-                  <td colspan="8" height="15"></td>
-              </tr>
-              <tr>
-                  <td width="20"></td>
-                  <td onclick="lee_img_a()"><img
-                          src="https://live.staticflickr.com/65535/52748617428_fac52241f2_c.jpg" width="100"></td>
-                  <td width="15"></td>
-                  <td onclick="lee_img_b()"><img
-                          src="https://live.staticflickr.com/65535/52748617393_cbeb13a978_c.jpg" width="100"></td>
-                  <td width="15"></td>
-                  <td onclick="lee_img_c()"><img
-                          src="https://live.staticflickr.com/65535/52747598187_21edc056d1_c.jpg" width="100"></td>
-                  <td width="15"></td>
-                  <td onclick="lee_img_d()"><img
-                          src="https://live.staticflickr.com/65535/52747598147_5c01b3a8de_c.jpg" width="100"></td>
-              </tr>
-          </table>
+        <div>
+          <img id="lee_change_img" src="https://live.staticflickr.com/65535/52748617428_fac52241f2_c.jpg" width="500"
+            border="1">
+        </div>
+        <table>
+          <tr>
+            <td colspan="8" height="15"></td>
+          </tr>
+          <tr>
+            <td width="20"></td>
+            <td onclick="lee_img_a()"><img src="https://live.staticflickr.com/65535/52748617428_fac52241f2_c.jpg"
+                width="100"></td>
+            <td width="15"></td>
+            <td onclick="lee_img_b()"><img src="https://live.staticflickr.com/65535/52748617393_cbeb13a978_c.jpg"
+                width="100"></td>
+            <td width="15"></td>
+            <td onclick="lee_img_c()"><img src="https://live.staticflickr.com/65535/52747598187_21edc056d1_c.jpg"
+                width="100"></td>
+            <td width="15"></td>
+            <td onclick="lee_img_d()"><img src="https://live.staticflickr.com/65535/52747598147_5c01b3a8de_c.jpg"
+                width="100"></td>
+          </tr>
+        </table>
       </div>
 
       <!-- 이도윤 소개 텍스트 -->
       <div width="60%" align="right" class="lee_profile_right">
-          <!-- 이도윤 정보 -->
-          <table>
-              <tr>
-                  <th>이름</th>
-                  <td width="50"></td>
-                  <td>이도윤</td>
-              </tr>
-              <tr>
-                  <th>생년월일</th>
-                  <td></td>
-                  <td>1997.03.25</td>
-              </tr>
-              <tr>
-                  <th>MBTI</th>
-                  <td></td>
-                  <td>INFP</td>
-              </tr>
-              <tr>
-                  <th>취미</th>
-                  <td></td>
-                  <td>게임, 축구보기</td>
-              </tr>
-              <tr>
-                  <th>특이사항</th>
-                  <td></td>
-                  <td>17살 차이나는 아가 동생(10살) 있음</td>
-              </tr>
-          </table>
+        <!-- 이도윤 정보 -->
+        <table>
+          <tr>
+            <th>이름</th>
+            <td width="50"></td>
+            <td>이도윤</td>
+          </tr>
+          <tr>
+            <th>생년월일</th>
+            <td></td>
+            <td>1997.03.25</td>
+          </tr>
+          <tr>
+            <th>MBTI</th>
+            <td></td>
+            <td>INFP</td>
+          </tr>
+          <tr>
+            <th>취미</th>
+            <td></td>
+            <td>게임, 축구보기</td>
+          </tr>
+          <tr>
+            <th>특이사항</th>
+            <td></td>
+            <td>17살 차이나는 아가 동생(10살) 있음</td>
+          </tr>
+        </table>
 
-          <!-- 이도윤 짧은 소개글 -->
-          <table>
-              <tr height="40"></tr>
-              <tr>
-                  <th>짧은 자기소개</th>
-              </tr>
-              <tr height="10"></tr>
-              <tr>
-                  <td>
-                      안녕하세요 이도윤입니다. 물리치료학과를 다니다가 저랑 맞지 않는다는 것을
-                      느끼고 게임 개발자가 되고싶어서 공부하다가 여기까지 오게 되었습니다.<br>
-                      올해로 10살이 된 아가 동생이 있습니다. 귀엽습니다. 가끔 제가 갑자기 사라지면 80퍼는 애가 불러서 입니다.
-                      자랑하려고 글쓰는거 맞습니다. 사진 구경하시죠ㅎㅎ<br>
-                      겜덕이고 축덕입니다. 가장 좋아하는 게임은 보더랜드 시리즈이고 최근에는 로스트아크를 즐기고 있습니다.<br>
-                      AC밀란 엄청 좋아합니다. 작년에 리그 우승했는데 올해는 글러먹어서 슬픕니다... 그래도 챔스는 8강까지 올라갔습니다ㅎㅎ</td>
-              </tr>
-          </table>
+        <!-- 이도윤 짧은 소개글 -->
+        <table>
+          <tr height="40"></tr>
+          <tr>
+            <th>짧은 자기소개</th>
+          </tr>
+          <tr height="10"></tr>
+          <tr>
+            <td>
+              안녕하세요 이도윤입니다. 물리치료학과를 다니다가 저랑 맞지 않는다는 것을
+              느끼고 게임 개발자가 되고싶어서 공부하다가 여기까지 오게 되었습니다.<br>
+              올해로 10살이 된 아가 동생이 있습니다. 귀엽습니다. 가끔 제가 갑자기 사라지면 80퍼는 애가 불러서 입니다.
+              자랑하려고 글쓰는거 맞습니다. 사진 구경하시죠ㅎㅎ<br>
+              겜덕이고 축덕입니다. 가장 좋아하는 게임은 보더랜드 시리즈이고 최근에는 로스트아크를 즐기고 있습니다.<br>
+              AC밀란 엄청 좋아합니다. 작년에 리그 우승했는데 올해는 글러먹어서 슬픕니다... 그래도 챔스는 8강까지 올라갔습니다ㅎㅎ</td>
+          </tr>
+        </table>
 
-          <!-- 이도윤 contact -->
-          <table align="center">
-              <tr>
-                  <td colspan="5" height="30"></td>
-              </tr>
-              <tr>
-                  <td><a href="https://velog.io/@ehdbs1276"><img
-                              src="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1228368893321736193%2FOv0og7E8.jpg"
-                              width="40"></td>
-                  <td width="50"></td>
-                  <td><a href="https://github.com/MiDoRye"><img
-                              src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" width="40"></td>
-                  <td width="50"></td>
-                  <td><a href="https://www.facebook.com/profile.php?id=100003845754549"><img
-                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
-                              width="40"></td>
-              </tr>
-          </table>
+        <!-- 이도윤 contact -->
+        <table align="center">
+          <tr>
+            <td colspan="5" height="30"></td>
+          </tr>
+          <tr>
+            <td><a href="https://velog.io/@ehdbs1276"><img
+                  src="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1228368893321736193%2FOv0og7E8.jpg"
+                  width="40"></td>
+            <td width="50"></td>
+            <td><a href="https://github.com/MiDoRye"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png"
+                  width="40"></td>
+            <td width="50"></td>
+            <td><a href="https://www.facebook.com/profile.php?id=100003845754549"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+                  width="40"></td>
+          </tr>
+        </table>
       </div>
     </section>
+    <!-- 윤성훈 -->
+    <div class="sh_location" id="sh_location">
+      <div class="container">
+        <div class="sh_box1">
+        </div>
+        <div class="sh_box2">
+          <table class="sh_table">
+            <tr>
+              <th class="sh_th">이름</th>
+              <td class="sh_td">윤성훈</td>
+
+            </tr>
+            <tr>
+              <th class="sh_th">MBTI</th>
+              <td class="sh_td">INTP</td>
+
+            </tr>
+            <tr>
+              <th class="sh_th">생년월일</th>
+              <td class="sh_td">96.07.21</td>
+
+            </tr>
+            <tr>
+              <th class="sh_th">사는 곳</th>
+              <td class="sh_td">시흥</td>
+
+            </tr>
+            <tr>
+              <th class="sh_th">자기소개</th>
+              <td class="sh_td">내일배움캠프를 시작하면서 아직 모든게 어렵고 낯설지만 직접 검색하고 찾아가며 조그마한 것들이라도 하나씩 작동이 되거나 완성이 될 때
+                코딩의 매력을 느끼고 있습니다. 저는 집에 있는것과 게임을 매우 좋아하는 집돌이이고 고양이를 매우 좋아하여 고양이 사진을 살짝 추가해봤습니다.
+              </td>
+
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <p class="teamName"><b>Jr. Coriny</b></p>
@@ -282,5 +296,6 @@
         Copyleft(c)2002 Team <b>Jr.Coriny</b> All rights reserved.
       </p>
     </footer>
-  </body>
+</body>
+
 </html>

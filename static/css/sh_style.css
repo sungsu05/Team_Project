@@ -4,56 +4,10 @@
     left: 0;
     width: 100%;
     background-color: transparent;
-    color: white;
+    color: black;
     padding-top: 20px;
 
 }
-
-.title {
-    background-color: gray;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.location {
-    padding-top: 100px;
-    height: 1080px;
-    background-color: aquamarine;    
-}
-
-.title_btn {
-    margin-right: 30px;
-}
-
-.team_name {
-    margin: 100px 450px 30px 450px;
-    height: 100px;
-    background-color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.team_info {
-    margin: 20px 450px 30px 450px;
-    height: 400px;
-    background-color: gray;
-}
-
-.comment_location {
-    height: 150px;
-    background-color: rgb(216, 152, 241);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
 .sh_location {
     height: 1050px;
     background-image: url("https://t1.daumcdn.net/tistoryfile/fs5/9_19_7_7_blog139632_attach_0_4.jpg?original");
@@ -119,21 +73,17 @@
     margin-inline: 1% 1%;
     background-color: transparent;
     height: 350px;
-    width: 800px;
-    color: rgb(87, 235, 222);
+    width: 800px;    
     font-size: 20px;
     font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    transition: color 1s ease-out;
+    justify-content: center;    
 }
 
 
-.sh_box2:hover {
-    color: white;
-}
+
 
 .sh_th {
     width: 100px;        
@@ -147,5 +97,11 @@
 
 .sh_table {
     border-collapse: collapse;
-    height: 400px;
+    height: 350px;
+    color: rgb(87, 235, 222);
+    transition: color 0.8s ease-out;
+}
+
+.sh_table:hover {
+    color: white;
 }
