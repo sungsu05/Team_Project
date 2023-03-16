@@ -25,8 +25,6 @@ let mainText = document.querySelector(".maintext");
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
 
-  console.log(value);
-
   if (value >= 2455) {
     mainText.style.animation = "vin_disappear 1.3s ease-out forwards";
   } else if (value <= 1200) {

@@ -52,7 +52,7 @@
 }
 
 .box {
-  animation: img_appear 1.3s ease-out;
+  animation: img_appear 1.3s ease-out forwards;
 }
 
 @keyframes img_appear {
@@ -117,20 +117,6 @@
   text-shadow: /* White glow */ 0 0 20px #b5ff53, 0 0 10px #fff, 0 0 20px #fff;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-family: sans-serif;
-}
-
-footer > p {
-  font-family: "TAEBAEKmilkyway";
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .sang_vinyl {
   text-shadow: 0 0 3vw #00e1ff;
 
@@ -149,4 +135,19 @@ footer > p {
       0 0 5vw #005c0c, 0 0 0.2vw #005c0c, 0.5vw 0.5vw 0.1vw #40340a;
     color: #806914;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+footer > p {
+  font-family: "TAEBAEKmilkyway";
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 10px 0 10px 0;
 }
