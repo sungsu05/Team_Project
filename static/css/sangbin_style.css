@@ -149,5 +149,8 @@ footer > p {
   font-family: "TAEBAEKmilkyway";
   padding-top: 5px;
   padding-bottom: 5px;
-  margin: 10px 0 10px 0;
+}
+
+footer > p:first-child {
+  margin-top: 10px;
 }
