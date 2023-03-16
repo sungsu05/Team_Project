@@ -26,39 +26,13 @@
 
   <!-- 이도윤 css -->
   <link rel="stylesheet" href="/static/css/doyoon_style.css" />
-  
+
   <!-- 윤성훈 css -->
   <link rel="stylesheet" href="/static/css/sh_style.css" />
-  <style>        
-  .won_container {
-    height: 1080px;
-    text-align: center;
 
-    display: inline-block;
+  <!-- 박재원 css -->
+  <link rel="stylesheet" href="/static/css/won_style.css" />
 
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://carmignaniconsulenza.files.wordpress.com/2022/12/certificazione-titoli-concorso.jpg");
-}
-/* 박재원 소개글 */
-.won_location {
-    margin-top: 10%;
-    margin-inline: 1% 1%;
-    display: inline-block;
-    height: 300px;
-    width: 600px;
-}
-/* 박재원 이미지 */
-.won_image {
-    border-radius: 35%;
-
-    margin-top: -10%;
-    margin-inline: 1% 1%;
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-}</style>
 </head>
 
 <body>
@@ -70,22 +44,24 @@
         background-size: cover;
       ">
     <!-- 메인 타이틀 -->
+    <!-- test -->
+    <!-- test -->
     <div class="title" id="navbar">
       <a href="#teamIntro"><button class="main_btn1" type="button">팀 프로젝트</button></a>
       <!-- 버튼 정렬을 위한 div -->
       <div class="button-container">
-        <!-- 각각의 팀원 페이지로 이동할 버튼 구현  -->   
+        <!-- 각각의 팀원 페이지로 이동할 버튼 구현  -->
 
         <a href="#son_location"><button class="main_btn" type="button">손성수</button></a>
         <a href="#sangbin"><button class="main_btn" type="button">임상빈</button></a>
         <a href="#lee_location"><button class="main_btn" type="button">이도윤</button></a>
         <a href="#sh_location"><button class="main_btn" type="button">윤성훈</button></a>
-        <a href="#won_location"><button class="main_btn" type="button">박재원</button></a>      
-        
+        <a href="#won_container"><button class="main_btn" type="button">박재원</button></a>
+
       </div>
     </div>
     <!-- 빈 박스 생성 (main_box를 내리기 위함) -->
-    <div id="teamIntro" style="height: 150px"></div>
+    <div style="height: 150px" id="teamIntro"></div>
     <!-- 팀 소개를 담은 div -->
     <div class="teamIntro">
       <div class="main_box" style="margin-left: 100px">
@@ -266,14 +242,14 @@
             <td colspan="5" height="30"></td>
           </tr>
           <tr>
-            <td><a href="https://velog.io/@ehdbs1276" target="_blank" ><img
+            <td><a href="https://velog.io/@ehdbs1276"><img
                   src="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1228368893321736193%2FOv0og7E8.jpg"
                   width="40"></td>
             <td width="50"></td>
-            <td><a href="https://github.com/MiDoRye" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png"
+            <td><a href="https://github.com/MiDoRye"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png"
                   width="40"></td>
             <td width="50"></td>
-            <td><a href="https://www.facebook.com/profile.php?id=100003845754549" target="_blank"><img
+            <td><a href="https://www.facebook.com/profile.php?id=100003845754549"><img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
                   width="40"></td>
           </tr>
@@ -283,8 +259,8 @@
     <!-- 윤성훈 -->
     <div class="sh_location" id="sh_location">
       <div class="container">
-        <div class="sh_box1">
-        </div>
+        <div class="sh_box1"></div>
+
         <div class="sh_box2">
           <table class="sh_table">
             <tr>
@@ -312,35 +288,41 @@
               <td class="sh_td">내일배움캠프를 시작하면서 아직 모든게 어렵고 낯설지만 직접 검색하고 찾아가며 조그마한 것들이라도 하나씩 작동이 되거나 완성이 될 때
                 코딩의 매력을 느끼고 있습니다. 저는 집에 있는것과 게임을 매우 좋아하는 집돌이이고 고양이를 매우 좋아하여 고양이 사진을 살짝 추가해봤습니다.
               </td>
-
             </tr>
-
           </table>
+        </div>
+        <div class="sh_box3">
+          <a href="https://ckzp.tistory.com/" target="_blank"><img class="sh_img1"
+              src="https://avatars.githubusercontent.com/u/14343537?s=200&v=4" width="70px" height="70px" />
+          </a>
+          <a href="https://github.com/ckzpckzp" target="_blank"><img class="sh_img2"
+              src="https://github.com/fluidicon.png" width="55px" height="55px" /></a>
         </div>
       </div>
     </div>
 
-    <div class="won_container">
+    <div class="won_container" id="won_container">
       <img class="won_image"
-           src="https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/335620756_2092552704272958_9050847254524589794_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=gD01gddwyBgAX_0kLos&_nc_ht=scontent-ssn1-1.xx&oh=00_AfD0Ju3coWQstRR-0Od1M8vyXl8HrRqvW-XdG3QqQCQL9g&oe=64145616" width='300'>
-      <div class="won_location" id="won_location">
-          <h2>내 정보</h2>
-          <h4>이름: 박재원 / 생년월일: 1999-11-05 / email: hajss225@gmail.com / MBTI: INFJ</h4>
-          <h3>※나의 대해※</h3>
-          <h4>👶코딩 두달차 코린이👶</h4>
-          <h4>🤪친해지면 이해불가🤪</h4>
-          <h4>🥴뇌정지 자주옴🥴</h4>
-          <h4>😭완전 기분파😭</h4>
-          <h4>🤮주량 소주3잔🤮</h4>
+        src="https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/335620756_2092552704272958_9050847254524589794_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=gD01gddwyBgAX_0kLos&_nc_ht=scontent-ssn1-1.xx&oh=00_AfD0Ju3coWQstRR-0Od1M8vyXl8HrRqvW-XdG3QqQCQL9g&oe=64145616"
+        width='300'>
+      <div class="won_location">
+        <h2>내 정보</h2>
+        <h4>이름: 박재원 / 생년월일: 1999-11-05 / email: hajss225@gmail.com / MBTI: INFJ</h4>
+        <h3>※나의 대해※</h3>
+        <h4>👶코딩 두달차 코린이👶</h4>
+        <h4>🤪친해지면 이해불가🤪</h4>
+        <h4>🥴뇌정지 자주옴🥴</h4>
+        <h4>😭완전 기분파😭</h4>
+        <h4>🤮주량 소주3잔🤮</h4>
       </div>
-  </div>
-  
-  <footer>
-    <p class="teamName"><b>Jr. Coriny</b></p>
-    <p class="copyleft">
-      Copyleft(c)2002 Team <b>Jr.Coriny</b> All rights reserved.
-    </p>
-  </footer>
+    </div> 
+
+    <footer>
+      <p class="teamName"><b>Jr. Coriny</b></p>
+      <p class="copyleft">
+        Copyleft(c)2002 Team <b>Jr.Coriny</b> All rights reserved.
+      </p>
+    </footer>
 
 </body>
 
