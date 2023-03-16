@@ -1,0 +1,43 @@
+/* 이도윤 소개 페이지 */
+
+.lee_location {
+    font-family: 'Gowun Dodum', sans-serif;
+    height: 1050px;
+    background-color: antiquewhite;
+    text-align: center;
+    position: relative;
+}
+
+/* 이도윤 소개 박스 */
+.lee_profile_right {
+    margin-top: 15%;
+    margin-inline: 0% 10%;
+    display: inline-block;
+    height: 500px;
+    width: 40%;
+    text-align: left;
+    font-size: large;
+}
+
+
+/* 이도윤 프로필 사진란 */
+.lee_profile_left {
+    margin-top: 13%;
+    margin-left: 15%;
+    height: 600px;
+    width: 30%;
+    float: left;
+    text-align: left;
+    font-size: large;
+}
+
+/* 이도윤 사진 호버 효과 */
+.lee_profile_left td img {
+    border: 1px solid black;
+}
+
+/* 이도윤 사진 호버 효과 */
+.lee_profile_left td img:hover {
+    border: 5px solid whitesmoke;
+    cursor: pointer;
+}
