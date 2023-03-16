@@ -8,6 +8,7 @@
     padding-top: 20px;
 
 }
+
 .sh_location {
     height: 1050px;
     background-image: url("https://t1.daumcdn.net/tistoryfile/fs5/9_19_7_7_blog139632_attach_0_4.jpg?original");
@@ -69,24 +70,34 @@
 }
 
 .sh_box2 {
-    margin-top: 25%;
-    margin-inline: 1% 1%;
+    margin-left: 30px;
+    margin-top: 25%;    
     background-color: transparent;
     height: 350px;
-    width: 800px;    
+    width: 800px;
     font-size: 20px;
     font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+} 
+.sh_box3 {
+    margin-top: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+
 }
 
 
 
 
 .sh_th {
-    width: 100px;        
+    width: 100px;
     padding: 8px;
     text-align: center;
 }
@@ -104,4 +115,14 @@
 
 .sh_table:hover {
     color: white;
+}
+
+.sh_img1:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.sh_img2:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
 }
