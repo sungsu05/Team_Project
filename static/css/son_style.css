@@ -1,0 +1,233 @@
+/*모든 텍스트 폰트 변경*/
+.son_location {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+/*최상단 메뉴 타이틀*/
+.title {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/*타이틀의 버튼*/
+.main_btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* 버튼 호버시 이펙트 발생 */
+.main_btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* 버튼 정렬 */
+.main_btn-container {
+  display: flex;
+  justify-content: center;
+  /* 수평 중앙정렬 */
+  align-items: center;
+  margin-top: 1px;
+  /* 여백 추가 */
+}
+
+.teamIntro {
+  height: 60%;
+}
+
+.teamIntro > div {
+  font-size: 2em;
+}
+
+.main_box {
+  margin-top: 70px;
+  opacity: 0;
+  /* 요소들이 초기에 투명하게 설정 */
+  animation: fade-in 7s ease-in-out forwards;
+  /*에니메이션 설정은 fade -in , 결과값까지의 실행 시간은 7s가 걸린다.*/
+  /*ease-in-out은,  첫 프레임과 끝 프레임은 느리게 진행되지만, 중간 프레임은 빠르게 진행된다.*/
+  /*forwards는 애니메이션이 종료된 이후에도 마지막 프레임의 스타일을 유지하게한다.*/
+}
+
+/*
+    class_name:nth-child(n)
+    해당하는 class를 가진 가장 상단의 객채부터 선택한다.
+    */
+.main_box:nth-child(1) {
+  animation-delay: 0s;
+  /*애니메이션이 실행되기전, 대기시간 설정*/
+}
+
+.main_box:nth-child(2) {
+  animation-delay: 0.5s;
+  /* 지연 시간 추가 */
+}
+
+.main_box:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.main_box:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-in {
+  0% {
+    /* 애니메이션 시작 시점에 투명도 0으로 설정 */
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    /* 애니메이션 끝나는 시점에 투명도 1로 설정 */
+  }
+}
+
+/*손성수의 소개 페이지*/
+.son_location {
+  /* 1050px로 사이즈를 맞춘 까닭은 사용자의 화면에 페이지 전체가 이 영역에 꽉 차 보이게 하기 위함이다.*/
+  height: 1050px;
+  /* 텍스트,또는 인라인 요소를 가로 중앙 정렬 */
+  text-align: center;
+  position: relative;
+  /* 배경 이미지 선언,색상을 약간 어둡게 조정했다. */
+  background-image: linear-gradient(
+      0deg,
+      rgba(226, 80, 61, 0.774),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://cdn.pixabay.com/photo/2022/02/24/08/35/background-7031999__340.jpg");
+  /* 배경 이미지의 사이즈와 위치값 조정 */
+  background-position: center;
+  background-size: cover;
+}
+
+/*손성수 페이지의 사진*/
+.son_image {
+  /*수평 정렬 하기 위한 인라인 설정*/
+  display: inline-block;
+  padding: 200px 100px;
+  background-image: url("https://www.korea.kr/goNewsRes/attaches/innods/images/000088/32_640.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  border-radius: 45%;
+  /*이동 애니메이션 선언*/
+  animation-name: move;
+  /*왕복 시간*/
+  animation-duration: 2s;
+  /*무한히 반복*/
+  animation-iteration-count: infinite;
+}
+
+/*이미지 호버*/
+/*호버란? 마우스를 특정 위치에 가져다 대면 인식하는 내장 함수*/
+.son_image:hover {
+  animation-name: rotate;
+  /* 빙글 도는 에니메이션*/
+  animation-duration: 1s;
+  /*한바퀴 도는 시간*/
+  animation-iteration-count: 1;
+  /*반복 횟수 1*/
+  /* 1회성 함수가 아니기에, 호버를 할 때마다 1회 반복한다.*/
+}
+
+/*평소 상태*/
+@keyframes move {
+  /* move 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
+  0% {
+    /* transform , 여러 애니메이션을 불러오기 위한 함수, 아래 코드에서는 수평으로 이동 동작하는 애니메이션을 반환받고 있다. */
+    transform: translateX(0);
+    /*처음 시작할 때에 수평으로 이동*/
+  }
+
+  50% {
+    transform: translateX(50px);
+    /* '프레임' 중간지점에서  오른쪽으로 이동
+                현재값에 따라 x,y 좌표 부호값을 토대로 왼쪽으로 이동 가능*/
+  }
+
+  100% {
+    transform: translateX(0);
+    /* 애니메이션이 끝날 때 초기값으로 이동*/
+  }
+}
+
+/*호버상태*/
+@keyframes rotate {
+  /* rotate 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
+  0% {
+    /* 회전 애니메이션을 반환받고 동작한다. */
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*손성수의 테이블*/
+.son_table {
+  /* 가로 정렬을 위한 인라인 요소 선언 */
+  display: inline-block;
+  margin-left: 100px;
+  /* 바탕 제거 */
+  background-color: transparent;
+  /* 인라인 요소 세로 정렬 */
+  vertical-align: middle;
+}
+
+/*손성수의 stringText 꾸미기*/
+.son_st {
+  padding: 15px;
+  font-size: 25px;
+  color: bisque;
+}
+
+/*쏜의 st 호버시*/
+.son_st:hover {
+  /* 0.5초마다 무한히 반복하는 blink 애니메이션 선언 */
+  animation: blink 0.5s infinite;
+}
+
+/*이펙트 발생*/
+@keyframes blink {
+  /* 반짝 반짝 빛나는 애니메이션 */
+  50% {
+    color: yellow;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow,
+      0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
+  }
+}
+
+/*쏜의 이미지 호버 효과들*/
+.son_img1:hover {
+  /* 크기 변경 */
+  transform: scale(2.2);
+  /* 변화하는데 걸리는 시간 설정 */
+  transition: transform 0.9s ease;
+}
+
+.son_img2:hover {
+  transform: scale(2.2);
+  transition: transform 0.5s ease;
+}
+
+.son_img3:hover {
+  transform: scale(2.2);
+  transition: transform 0.5s ease;
+}
