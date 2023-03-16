@@ -66,7 +66,7 @@
   height: 60%;
 }
 
-.teamIntro>div {
+.teamIntro > div {
   font-size: 2em;
 }
 
@@ -74,7 +74,7 @@
   margin-top: 70px;
   opacity: 0;
   /* 요소들이 초기에 투명하게 설정 */
-  animation: fade-in 7s ease-in-out forwards;
+  animation: fade-in 2s ease-in-out forwards;
   /*에니메이션 설정은 fade -in , 결과값까지의 실행 시간은 7s가 걸린다.*/
   /*ease-in-out은,  첫 프레임과 끝 프레임은 느리게 진행되지만, 중간 프레임은 빠르게 진행된다.*/
   /*forwards는 애니메이션이 종료된 이후에도 마지막 프레임의 스타일을 유지하게한다.*/
@@ -124,9 +124,11 @@
   text-align: center;
 
   /* 배경 이미지 선언,색상을 약간 어둡게 조정했다. */
-  background-image: linear-gradient(0deg,
+  background-image: linear-gradient(
+      0deg,
       rgba(226, 80, 61, 0.774),
-      rgba(0, 0, 0, 0.5)),
+      rgba(0, 0, 0, 0.5)
+    ),
     url("https://cdn.pixabay.com/photo/2022/02/24/08/35/background-7031999__340.jpg");
   /* 배경 이미지의 사이즈와 위치값 조정 */
   background-position: center;
@@ -165,7 +167,6 @@
 
 /*평소 상태*/
 @keyframes move {
-
   /* move 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
   0% {
     /* transform , 여러 애니메이션을 불러오기 위한 함수, 아래 코드에서는 수평으로 이동 동작하는 애니메이션을 반환받고 있다. */
@@ -187,7 +188,6 @@
 
 /*호버상태*/
 @keyframes rotate {
-
   /* rotate 애니메이션 프레임에 따라 동작되는 방식을 정의하겠다.*/
   0% {
     /* 회전 애니메이션을 반환받고 동작한다. */
@@ -225,7 +225,6 @@
 
 /*이펙트 발생*/
 @keyframes blink {
-
   /* 반짝 반짝 빛나는 애니메이션 */
   50% {
     color: yellow;
