@@ -1,0 +1,151 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding-top: 20px;
+
+}
+
+.title {
+    background-color: gray;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    padding-top: 100px;
+    height: 1080px;
+    background-color: aquamarine;    
+}
+
+.title_btn {
+    margin-right: 30px;
+}
+
+.team_name {
+    margin: 100px 450px 30px 450px;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team_info {
+    margin: 20px 450px 30px 450px;
+    height: 400px;
+    background-color: gray;
+}
+
+.comment_location {
+    height: 150px;
+    background-color: rgb(216, 152, 241);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sh_location {
+    height: 1050px;
+    background-image: url("https://t1.daumcdn.net/tistoryfile/fs5/9_19_7_7_blog139632_attach_0_4.jpg?original");
+    background-size: 100% 100%;
+
+}
+
+#end_location {
+    height: 500px;
+    background-color: black;
+    text-align: center;
+    position: relative;
+}
+
+.student_image {
+    margin-top: 13%;
+    margin-inline: 1% 1%;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.student_name {
+    background-color: yellow;
+    height: 25px;
+    border-radius: 15%;
+}
+
+.image_info {
+    background-color: aqua;
+    height: 175px;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+}
+
+.sh_box1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 25%;
+    margin-inline: 1% 1%;
+    height: 350px;
+    width: 400px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtEMUl%2FbtrDc6957nj%2FNwJoDw0EOapJNDSNRNZK8K%2Fimg.jpg");
+    background-size: 100% 100%;
+    transition: all 0.8s linear;
+}
+
+.sh_box1:hover {
+    background-image: url("https://cdn.pixabay.com/photo/2020/07/04/05/24/cat-5368270__480.jpg");
+}
+
+.sh_box2 {
+    margin-top: 25%;
+    margin-inline: 1% 1%;
+    background-color: transparent;
+    height: 350px;
+    width: 800px;
+    color: rgb(87, 235, 222);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: color 1s ease-out;
+}
+
+
+.sh_box2:hover {
+    color: white;
+}
+
+.sh_th {
+    width: 100px;        
+    padding: 8px;
+    text-align: center;
+}
+
+.sh_td {
+    text-align: center;
+}
+
+.sh_table {
+    border-collapse: collapse;
+    height: 400px;
+}
